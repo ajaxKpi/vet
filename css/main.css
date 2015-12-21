@@ -99,7 +99,7 @@ section {
   float: left; }
 
 svg {
-  height: 60px;
+
   width: 60px;
   z-index: 1;
   position: relative; }
@@ -303,12 +303,18 @@ svg path {
 .s_about li {
   margin-bottom: 10px; }
 .s_about .social_wrap {
-  margin-top: 25px; }
+  margin-top: 25px;
+
+}
+.social_wrap ul {  color: #FF6347;}
+
 
 .social_wrap li {
   display: inline-block;
   font-size: 20px;
-  padding: 0 3px; }
+  padding: 0 3px;
+  
+}
 
 .resume_container .left .resume_description strong {
   margin-left: 10px; }
@@ -493,4 +499,13 @@ svg path {
     width:60px;
     height: 60px;
 
+}
+
+.dog_nice{
+  background-color: #F9E9D9;
+
+}
+#svg2{
+  width: 100%;
+  margin: 0 auto;
 }
