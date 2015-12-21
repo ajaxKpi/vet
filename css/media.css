@@ -26,6 +26,12 @@
 	.resume_container .left h3 {
 		margin-top: 0;
 	}
+    .loader .loader_inner {
+        min-width: 300px;
+        min-height: 300px;
+        margin-top: -30px;
+        margin-left: -70px;
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -46,6 +52,7 @@
 	.main_footer .social_wrap ul {
 		padding-left: 0;
 	}
+
 }
 
 /* Custom, iPhone Retina */

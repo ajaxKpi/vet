@@ -64,9 +64,23 @@ $(document).ready(function() {
 
 	$(".top_mnu ul a").mPageScroll2id();
 
+    if ( $(window).width()<1000){
+        $(".Family_doc").html('<use xlink:href="img/fonts_SVG.svg#icon-GrandHoteltworow"></use>')
+    }
+
+
 });
 
+$(window).resize(function(){
+    if ( $(window).width()<1000){
+        $(".Family_doc").html('<use xlink:href="img/fonts_SVG.svg#icon-GrandHoteltworow"></use>')
+        }
+    else{
+        $(".Family_doc").html('<use xlink:href="img/fonts_SVG.svg#icon-GrandHotel"></use>')
+    }
+    }
 
+)
 /*$(window).load(function() {
 
 	$(".loader_inner").fadeOut();
@@ -76,3 +90,5 @@ $(document).ready(function() {
 	$(".top_text p").animated("fadeInUp", "fadeOutDown");
 
 }); */
+
+
