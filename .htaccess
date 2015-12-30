@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.vetcare24\.com.ua$
+RewriteRule ^/?$ "http\:\/\/vetcare24\.com.ua\/" [R=301,L]

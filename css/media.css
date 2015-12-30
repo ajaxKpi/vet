@@ -32,6 +32,17 @@
         margin-top: -30px;
         margin-left: -70px;
     }
+
+.dog_nice{
+	display: none;
+}
+.section_header_hide{
+	display: block;
+}
+
+
+
+	
 }
 
 /* Extra Small Devices, Phones */
@@ -87,3 +98,5 @@
 @media only screen and (min-width : 1200px) {
 
 }
+
+

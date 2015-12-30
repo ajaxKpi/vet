@@ -1,5 +1,14 @@
+// eye blinking
+TO_interval =1000;
+
+// preloader time
 $(".loader").delay(2000).fadeOut("slow");
 $(".loader_inner").delay(2000).fadeOut("slow");
+
+
+/*
+ 		*************************** TEMPLATE PART *******************************
+ */
 
 $(document).ready(function() {
 
@@ -13,6 +22,7 @@ $(document).ready(function() {
 	$(".popup").magnificPopup({type:"image"});
 	$(".popup_content").magnificPopup({
 		type:"inline",
+		type:"inline",
 		midClick: true
 	});
 
@@ -24,6 +34,11 @@ $(document).ready(function() {
 
 	$(".left .resume_item").animated("fadeInLeft", "fadeOutDown");
 	$(".right .resume_item").animated("fadeInRight", "fadeOutDown");
+
+	$(".dog_svg").animated("fadeInUp", "fadeOutDown");
+
+//	$(".service_item_svg").animated("fadeInLeft", "fadeOutDown");
+//	$(".service_item_svg").animated("fadeInRight", "fadeOutDown");
 
 	function heightDetect() {
 		$(".main_head").css("height", $(window).height());
@@ -62,15 +77,20 @@ $(document).ready(function() {
 
 	$("input, select, textarea").jqBootstrapValidation();
 
-	$(".top_mnu ul a").mPageScroll2id();
+	$("a[href*='#']").mPageScroll2id();
 
     if ( $(window).width()<1000){
         $(".Family_doc").html('<use xlink:href="img/fonts_SVG.svg#icon-GrandHoteltworow"></use>')
     }
 
-
 });
 
+
+/*
+* ********************************* IZV part *********************************
+ */
+
+// Use one row and 2 rows(small screens) h1 of
 $(window).resize(function(){
     if ( $(window).width()<1000){
         $(".Family_doc").html('<use xlink:href="img/fonts_SVG.svg#icon-GrandHoteltworow"></use>')
@@ -92,3 +112,51 @@ $(window).resize(function(){
 }); */
 
 
+/*
+			Dog's eye claping
+ */
+function  OpenEye(){
+	if ($('#eye').css("opacity")=='0'){
+
+		$('#eye').css("opacity",1)
+		 TO_interval=500
+		clearInterval(timeoutHandle);
+		timeoutHandle = setInterval(OpenEye, TO_interval);
+
+			}
+	else{
+		$('#eye').css("opacity",0)
+		TO_interval=2000
+		clearInterval(timeoutHandle);
+		timeoutHandle = setInterval(OpenEye, TO_interval);
+
+	}
+
+}
+timeoutHandle = setInterval(OpenEye, TO_interval);
+
+
+
+
+$(".service_item_svg").click(function(){
+	target_id ="#svg_"+(event.currentTarget.id);
+	$(".col-md-3 a").mPageScroll2id({
+			onComplete:	function(){
+
+				$(target_id).addClass("flashit");
+			}}
+		)
+
+})
+
+if (window.innerWidth >768){
+	$(".serv_link").attr("href","#dog_nice")
+}
+else{$(".serv_link").attr("href","#services")}
+
+$(window).resize(function(){
+	if (window.innerWidth >768){
+		$(".serv_link").attr("href","#dog_nice")
+	}
+	else{$(".serv_link").attr("href","#services")}
+});

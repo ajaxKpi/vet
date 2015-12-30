@@ -138,7 +138,7 @@ svg {
           transition: transform 0.5s, top 0.2s;
   display: block; }
 
-svg path {
+.resume_container svg path {
   fill: #e0e0e0; }
 
 .sw-bottom {
@@ -322,7 +322,7 @@ svg path {
   margin-right: 10px; }
 .resume_container .left {
   text-align: right;
-  border-right: #d2d2d2 1px solid; }
+  border-right: .service_item_svg.d2d2d2 1px solid; }
   .resume_container .left h3 {
     text-align: right; }
 .resume_container .right {
@@ -508,4 +508,152 @@ svg path {
 #svg2{
   width: 100%;
   margin: 0 auto;
+}
+.dog_alone{
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+
+  top: 20%;
+  left: 35%;
+  /* overflow: inherit; */
+  max-height: 250px;
+
+}
+.service_item {
+  position: relative;
+  display: inline-block;
+  width: 16%;
+}
+.service_item h4{
+  margin: 0;
+  text-align: center;
+}
+.service_item p{
+  text-align: justify;
+
+}
+.service_item_svg{
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+}
+#new2{
+  top: -36px;
+  left: 310px;
+}
+#new1{
+  top: -36px;
+  left: 639px;
+}
+#passport{
+  top: -227px;
+  left: -144px;
+}
+#new3{
+  top: -180px;
+  left: 450px;
+}
+#new4{
+  top: -227px;
+  left: 199px;
+
+}
+#eye{
+  fill:#ed8124;
+  opacity: 1;
+}
+h4{
+  text-align: center;
+  color: black;
+  margin-top: 3px;
+}
+.service_item_svg{
+   fill:#e13809;
+ }
+
+.services_icons{
+  height: 50px;
+}
+
+.section_header_hide{
+  display: none ;
+}
+
+.service_item_svg.dog-h24{
+  fill: #0741d4;
+}
+.service_item_svg.dog-diagnostics{
+  fill:#434343;
+}
+.service_item_svg.dog-dietolog{
+  fill:#b1415a;
+}
+.service_item_svg.dog-familydoctor{
+  fill:#f2aa00;
+}
+.service_item_svg.dog-feeding{
+  fill:#c53174;
+}
+.service_item_svg.dog-food{
+  fill:#ed4b00;
+
+}
+.service_item_svg.dog-help_choose{
+  fill:#50415a;
+}
+
+.service_item_svg.dog-mind{
+  fill:#00b19b;
+}
+.service_item_svg.dog-motion{
+  fill:#434343;
+}
+.service_item_svg.dog-pologi{
+  fill:#50c95a;
+
+}
+.service_item_svg.dog-training{
+  fill:#f2aa00;
+}
+.service_item_svg.dog-transporting{
+  fill:#b141d4;
+}
+.service_item_svg.dog-hospital{
+  fill:#a3d8d6;
+}
+.service_item_svg.dog-specialists{
+  fill: #07ffd4;
+}
+
+
+.service_item_svg.dog-vacinating{
+  fill:#a3d8d6;
+}
+.service_item_svg.dog-doctor{
+  fill:#f2aa00;
+}
+.service_item_svg:hover{
+  fill:#2c3c27;
+}
+
+
+
+/* Flash class and keyframe animation */
+.flashit{
+  -webkit-animation: flash linear 1s 2;
+  animation: flash linear 1s 2;
+}
+@-webkit-keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: .1; }
+  100% { opacity: 1; }
+}
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: .1; }
+  100% { opacity: 1; }
 }
