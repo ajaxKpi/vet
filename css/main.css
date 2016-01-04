@@ -505,19 +505,22 @@ svg {
   background-color: #F9E9D9;
 
 }
+.dog_svg{
+  position: absolute;
+  top: 47%;
+  left: 40%;
+
+}
 #svg2{
   width: 100%;
   margin: 0 auto;
 }
 .dog_alone{
-  width: 30%;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
 
-  top: 20%;
-  left: 35%;
   /* overflow: inherit; */
   max-height: 250px;
 
@@ -571,6 +574,7 @@ h4{
   color: black;
   margin-top: 3px;
 }
+
 .service_item_svg{
    fill:#e13809;
  }
@@ -590,7 +594,7 @@ h4{
   fill:#434343;
 }
 .service_item_svg.dog-dietolog{
-  fill:#b1415a;
+  fill: #912e7b;
 }
 .service_item_svg.dog-familydoctor{
   fill:#f2aa00;
@@ -640,6 +644,10 @@ h4{
   fill:#2c3c27;
 }
 
+.resume_icon svg{
+  height: 70px;
+  width: 70px;
+}
 
 
 /* Flash class and keyframe animation */
@@ -656,4 +664,12 @@ h4{
   0% { opacity: 1; }
   50% { opacity: .1; }
   100% { opacity: 1; }
+}
+
+.row.logo{
+  margin-left:-10%;
+}
+.logo_cnt{
+  float: left;
+  margin-left: 20px;
 }

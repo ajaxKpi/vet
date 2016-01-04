@@ -35,8 +35,8 @@ $(document).ready(function() {
 	$(".left .resume_item").animated("fadeInLeft", "fadeOutDown");
 	$(".right .resume_item").animated("fadeInRight", "fadeOutDown");
 
-	$(".dog_svg").animated("fadeInUp", "fadeOutDown");
 
+	$(".animation_3").animated("fadeInRight", "fadeOutDown");
 //	$(".service_item_svg").animated("fadeInLeft", "fadeOutDown");
 //	$(".service_item_svg").animated("fadeInRight", "fadeOutDown");
 
@@ -151,8 +151,12 @@ $(".service_item_svg").click(function(){
 
 if (window.innerWidth >768){
 	$(".serv_link").attr("href","#dog_nice")
+
+	//$(".main_head.main_color_bg").attr(".data-image-src", "img/firstpage_background_hd.jpg");
 }
-else{$(".serv_link").attr("href","#services")}
+else{$(".serv_link").attr("href","#services")
+	//$(".main_head.main_color_bg").attr(".data-image-src", "img/firstpage_background.jpg")
+	}
 
 $(window).resize(function(){
 	if (window.innerWidth >768){
@@ -160,3 +164,15 @@ $(window).resize(function(){
 	}
 	else{$(".serv_link").attr("href","#services")}
 });
+
+//set color and remove cover of svg img
+//$(".row").animated("fadeInLeft", "fadeOutDown");
+$(".dog_svg").animated("fadeInDownBig", "fadeOutDown");
+
+$("#doctor").one("fadeInRight", "fadeOutDown");
+
+if($(window).width() > 515) {
+
+} else {
+	$("#data-image-src").attr("src", "small.png");
+}
