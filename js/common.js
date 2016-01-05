@@ -70,10 +70,7 @@ $(document).ready(function() {
 		};
 	});
 
-	$(".portfolio_item").each(function(i) {
-		$(this).find("a").attr("href", "#work_" + i);
-		$(this).find(".podrt_descr").attr("id", "work_" + i);
-	});
+
 
 	$("input, select, textarea").jqBootstrapValidation();
 
@@ -138,15 +135,25 @@ timeoutHandle = setInterval(OpenEye, TO_interval);
 
 
 
-$(".service_item_svg").click(function(){
-	target_id ="#svg_"+(event.currentTarget.id);
+$(".service_item_svg").click(function() {
+	target_id = "#svg_" + (event.currentTarget.id);
 	$(".col-md-3 a").mPageScroll2id({
-			onComplete:	function(){
+		onComplete: function () {
 
-				$(target_id).addClass("flashit");
-			}}
-		)
+			$(target_id).addClass("flashit");
+			$(target_id).removeClass("animated");
 
+			$(target_id).bind('oanimationend animationend webkitAnimationEnd', function() {
+
+
+				$(target_id).removeClass("flashit")
+				//$(target_id).addClass("animated");
+
+			});
+		}
+
+
+	})
 })
 
 if (window.innerWidth >768){
@@ -167,12 +174,32 @@ $(window).resize(function(){
 
 //set color and remove cover of svg img
 //$(".row").animated("fadeInLeft", "fadeOutDown");
+
+//rigth appear when scroll
+$("#doctor").animated("fadeInRight", "fadeOutDown");
 $(".dog_svg").animated("fadeInDownBig", "fadeOutDown");
+//$(".icon").animated("fadeInRight","fadeOutDown");
 
-$("#doctor").one("fadeInRight", "fadeOutDown");
 
-if($(window).width() > 515) {
+$("#doctor").bind('oanimationend animationend webkitAnimationEnd', function() {
 
-} else {
-	$("#data-image-src").attr("src", "small.png");
-}
+
+	$(".icon").animated("fadeInRight","fadeOutDown", function(){
+		$(".icon").removeClass("animated")
+		$(".icon").removeClass("fadeInRight")
+		$(".icon").removeClass("fadeOutDown")
+	})
+
+
+});
+
+
+$(".icon").bind('oanimationend animationend webkitAnimationEnd', function() {
+
+
+	//$(".icon").removeClass("fadeOutDown")
+
+});
+
+
+
