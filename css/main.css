@@ -673,3 +673,7 @@ h4{
   float: left;
   margin-left: 20px;
 }
+.row1 svg{
+  width:80px;
+  height:80px;
+}
