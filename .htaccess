@@ -1,7 +1,6 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^vetcare24.com.ua[nc]
-RewriteRule ^(.*)$ http://www.vetcare24.com.ua/$1 [r=301,nc]
-
+RewriteCond %{HTTP_HOST} ^www\.vetcare24\.com.ua$
+RewriteRule ^/?$ "http\:\/\/vetcare24\.com.ua\/" [R=301,L]
 RewriteCond %{HTTP_HOST} ^185\.104\.45\.23
 RewriteRule (.*) http://www.vetcare24.com.ua/$1 [R=301,L]
 
@@ -120,12 +119,6 @@ Header set Cache-Control "max-age=1, private, must-revalidate"
 </filesMatch>
 </ifModule>
 # END Caching
-
-
-<FilesMatch "\.(svg|jpeg|png|js|css|html)$">
-Header set Cache-Control "max-age=3600"
-</FilesMatch>
-
 <ifModule mod_gzip.c>
 mod_gzip_on Yes
 mod_gzip_dechunk Yes
@@ -136,6 +129,3 @@ mod_gzip_item_include mime ^application/x-javascript.*
 mod_gzip_item_exclude mime ^image/.*
 mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
 </ifModule>
-
-location ~* \.(js|css|png|jpg|jpeg|gif|ico)(\?ver=[0-9.]+)?$ {
-    expires 1d;

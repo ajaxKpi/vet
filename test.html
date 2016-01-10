@@ -9,17 +9,6 @@
 </head>
 <body>
 
-<div class="polyglot-language-switcher">
-	<ul style="display: none">
-		<li><a href="#" title="English (US)"  data-lang-id="en_US"><img src="img/gb.png" alt="United States"> English (US)</a></li>
-		<li><a href="#" title="French (France)" data-lang-id="ua_UA"><img src="img/ua.png" alt="Ukraine"> Français (France)</a></li>
-
-	</ul>
-</div>
-
-
-	<div class="bfh-selectbox bfh-languages" data-language="en_US" data-available="en_US,fr_CA,es_MX" data-flags="true">
-	</div>
 
 
 <div id="pls1"></div>
@@ -36,8 +25,8 @@
 
 <script>
 	var languages = [
-		{id: 'en_US',title: 'English (US)',name: '',flagImg: 'img/gb.png',flagTitle: 'United States'},
-		{id: 'ua_UA',title: 'Українська (UA)',name: '',flagImg: 'img/ua.png',flagTitle: 'Ukraine'},
+		{id: 'en_US',title: 'English (US)',name: 'English',flagImg: 'img/gb.png',flagTitle: 'United States'},
+		{id: 'ua_UA',title: 'Українська (UA)',name: 'Українська',flagImg: 'img/ua.png',flagTitle: 'Ukraine'},
 	];
 	React.render(React.createElement(PolyglotLanguageSwitcher, {
 		items: languages,
