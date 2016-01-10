@@ -1,5 +1,6 @@
 // eye blinking
 TO_interval =1000;
+Slider_TO =6000;
 
 // preloader time
 $(".loader").delay(2000).fadeOut("slow");
@@ -202,4 +203,23 @@ $(".icon").bind('oanimationend animationend webkitAnimationEnd', function() {
 });
 
 
+
+var items = ["img/firstpage_background_hd.jpg","img/nn.jpg","img/bg.jpg"]
+var currentIndex = 0, itemAmt = items.length, prevIndex =0;
+
+var autoSlide = setInterval(function() {
+	currentIndex += 1;
+	if (currentIndex > itemAmt - 1) {
+		currentIndex = 0;
+		prevIndex=itemAmt-1;
+	}
+
+	// $(items[prevIndex]).css("opacity", "0")
+	// $(items[currentIndex]).css("opacity", "1")
+	$(".parallax-mirror img").fadeOut("slow", function(){$(".parallax-mirror img").attr("src",items[currentIndex])})
+
+	$(".parallax-mirror img").fadeIn("slow")
+
+	prevIndex = currentIndex;
+}, Slider_TO);
 
