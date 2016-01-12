@@ -1,6 +1,6 @@
 // eye blinking
 TO_interval =1000;
-Slider_TO =9000;
+Slider_TO =7000;
 
 // preloader time
 $(".loader").delay(2000).fadeOut("slow");
@@ -174,15 +174,19 @@ $(window).resize(function(){
 });
 
 //set color and remove cover of svg img
-//$(".row").animated("fadeInLeft", "fadeOutDown");
-
+$(".A_left").animated("fadeInLeft", "fadeOutDown");
+$(".row1").animated("fadeInUp", "fadeOutDown");
+$(".A_rigth").animated("fadeInRight", "fadeOutDown");
 //rigth appear when scroll
 $("#doctor").animated("fadeInRight", "fadeOutDown");
 $(".dog_svg").animated("fadeInDownBig", "fadeOutDown");
 //$(".icon").animated("fadeInRight","fadeOutDown");
 
 
-var items = ["img/firstpage_background_hd.jpg","img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg"]
+var items = ["img/firstpage_background_hd.jpg", "img/1.jpg","img/21.jpg", "img/2.jpg","img/31.jpg", "img/3.jpg",
+	"img/41.jpg", "img/4.jpg","img/51.jpg","img/5.jpg","img/61.jpg","img/6.jpg"]
+
+
 var currentIndex = 0, itemAmt = items.length, prevIndex =0;
 
 var autoSlide = setInterval(function() {

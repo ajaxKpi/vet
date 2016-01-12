@@ -86,11 +86,12 @@ section {
       background-repeat: no-repeat;
       background-position: center center;
       background-color: #327191;
-      min-width: 500px;
+      width: 500px;
       min-height: 500px;
       margin-top: -30px;
-      margin-left: -30px;
-      left: 30%;
+      margin-left: -250px;
+
+      left: 50%;
       top: 20%;
       position: absolute;
   }
@@ -498,7 +499,6 @@ svg {
 .vc_logo.bottom{
     width:60px;
     height: 60px;
-
 }
 
 .dog_nice{
@@ -508,7 +508,8 @@ svg {
 .dog_svg{
   position: absolute;
   top: 47%;
-  left: 40%;
+  left: 50%;
+  margin-left: -150px;
 
 }
 #svg2{
@@ -575,9 +576,7 @@ h4{
   margin-top: 3px;
 }
 
-.service_item_svg{
-   fill:#e13809;
- }
+
 
 .services_icons{
   height: 50px;
@@ -586,67 +585,75 @@ h4{
 .section_header_hide{
   display: none ;
 }
-
-.service_item_svg.dog-h24{
+.dog-passport_dog{
+  fill:#e13809;
+}
+.dog-h24{
   fill: #0741d4;
 }
-.service_item_svg.dog-diagnostics{
-  fill:#434343;
+.dog-diagnostics{
+  fill:#3694C3;
 }
-.service_item_svg.dog-dietolog{
+.dog-surgery{
   fill: #912e7b;
 }
-.service_item_svg.dog-familydoctor{
+.dog-familydoctor{
   fill:#f2aa00;
 }
-.service_item_svg.dog-feeding{
+.dog-feeding{
   fill:#c53174;
 }
-.service_item_svg.dog-food{
+.dog-food{
   fill:#ed4b00;
 
 }
-.service_item_svg.dog-help_choose{
+.dog-help_choose{
   fill:#50415a;
 }
 
-.service_item_svg.dog-mind{
+.dog-mind{
   fill:#00b19b;
 }
-.service_item_svg.dog-motion{
-  fill:#434343;
+.dog-motion{
+  fill:#5BD236;
 }
-.service_item_svg.dog-pologi{
+.dog-pologi{
   fill:#50c95a;
 
 }
-.service_item_svg.dog-training{
+.dog-training{
   fill:#f2aa00;
 }
-.service_item_svg.dog-transporting{
+.dog-transporting{
   fill:#b141d4;
 }
-.service_item_svg.dog-hospital{
-  fill:#a3d8d6;
+.dog-hospital{
+  fill: #EED44A;
 }
-.service_item_svg.dog-specialists{
-  fill: #07ffd4;
+.dog-specialists{
+  fill: #5FE2CB;
 }
 
 
-.service_item_svg.dog-vacinating{
+.dog-vacinating{
   fill:#a3d8d6;
 }
-.service_item_svg.dog-doctor{
+.dog-doctor{
+  fill:#f2aa00;
+}
+.dog-droppers{
   fill:#f2aa00;
 }
 .service_item_svg:hover{
   fill:#2c3c27;
 }
 
+
+
+
 .resume_icon svg{
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 }
 
 
