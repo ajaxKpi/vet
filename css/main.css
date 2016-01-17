@@ -28,7 +28,9 @@ section,
     font-weight: 400;
     font-size: 12px;
     margin-top: 0;
-    margin-bottom: 35px; }
+    margin-bottom: 35px;
+
+    }
 
 section {
   padding: 70px 0 90px; }
@@ -117,15 +119,18 @@ svg {
     display: block; }
 
 .sandwich {
-  width: 28px;
-  height: 28px;
+  width: 41px;
+  height: 25px;
   position: absolute;
   top: 8px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 200; }
+  z-index: 200;
+  color: white;
+  font-weight:800;
+}
 
 .sw-topper {
   position: relative;
@@ -273,7 +278,8 @@ svg {
       animation-delay: 0.5s; }
 
 .toggle_mnu {
-  background-color: #000; }
+  background-color: #7F6D6A;
+  border-radius: 25px; }
 
 .main_footer {
   padding: 50px 0;
@@ -499,6 +505,7 @@ svg {
 .vc_logo.bottom{
     width:60px;
     height: 60px;
+  float: left;
 }
 
 .dog_nice{
@@ -645,6 +652,10 @@ h4{
 .dog-droppers{
   fill:#f2aa00;
 }
+
+.dog-scissors{
+  fill:#8fc8e4;
+}
 .service_item_svg:hover{
   fill:#2c3c27;
 }
@@ -684,4 +695,44 @@ h4{
 .row1 svg{
   width:80px;
   height:80px;
+}
+.call24{
+  position: fixed;
+  right: 150px;
+  top: 20px;
+  font-size: 1.2em;
+  z-index: 999;
+  font-weight: 800;
+  fill: rgba(255, 0, 0, 0.6);
+ /* background: rgba(255,255,255,0.4);*/
+  padding: 10px;
+}
+
+.call24 p{
+  color: rgba(255, 0, 0, 0.6);
+}
+.call24:hover, #svg24h:hover{
+  fill: rgba(255, 0, 0, 1);
+  color: rgba(255, 0, 0, 1);
+}
+.call24:hover p{
+
+  color: rgba(255, 0, 0, 1);
+}
+.latin{
+  font-size: 1.5em;
+  text-align: center;
+  font-family:"Old English Text MT" ,sans-serif;
+}
+.nolatin{
+  font-size: 1.5em;
+  text-align: center;
+  font-family:"Monotype Corsiva" ,sans-serif;
+}
+.middledot{
+  font-size:1em;
+  font-weight:800;
+}
+ul{
+  list-style: none;
 }
