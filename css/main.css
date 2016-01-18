@@ -125,7 +125,8 @@ svg {
   top: 8px;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 10px;
+  letter-spacing: 2px;
   margin: auto;
   z-index: 200;
   color: white;
@@ -278,8 +279,10 @@ svg {
       animation-delay: 0.5s; }
 
 .toggle_mnu {
-  background-color: #7F6D6A;
-  border-radius: 25px; }
+  background-color: black;
+  text-transform: uppercase;
+  border: solid thin  blue;
+ }
 
 .main_footer {
   padding: 50px 0;
@@ -289,7 +292,9 @@ svg {
     float: right;
     line-height: 0; }
     .main_footer .social_wrap ul {
-      margin: 0; }
+      margin-top: -27px;
+      color:white;
+    }
 
 .person {
   text-align: center;
@@ -498,7 +503,7 @@ svg {
 
 .vc_logo{
     
-    width:120px;
+    width:100px;
     height: 120px;
     fill: #FEFEFE;
 }
@@ -690,7 +695,7 @@ h4{
 }
 .logo_cnt{
   float: left;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .row1 svg{
   width:80px;
@@ -735,4 +740,11 @@ h4{
 }
 ul{
   list-style: none;
+}
+ul li{
+  color:#888;
+}
+.bold{
+  color: #000;
+  font-weight: 800;
 }

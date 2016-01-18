@@ -175,7 +175,7 @@ $(window).resize(function(){
 
 //set color and remove cover of svg img
 //$(".A_left").animated("fadeInLeft", "fadeOutDown");
-$(".container.allservices").animated("fadeInUp", "fadeOutDown");
+$(".container.allservices").animated("fadeInUp");
 //$(".A_rigth").animated("fadeInRight", "fadeOutDown");
 //rigth appear when scroll
 $("#doctor").animated("fadeInRight", "fadeOutDown");

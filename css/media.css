@@ -37,8 +37,12 @@
 .section_header_hide{
 	display: block;
 }
-
-
+.latin, .nolatin{
+	display:none;
+}
+	.main_footer .social_wrap ul{
+		margin-top: 33px;
+	}
 
 	
 }
@@ -84,6 +88,7 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+
 
 }
 
