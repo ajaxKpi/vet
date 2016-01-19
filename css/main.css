@@ -112,9 +112,10 @@ svg {
   height: 60px;
   position: fixed;
   z-index: 100;
-  border: none;
+  border: solid 1px blue;
   right: 20px;
-  top: 20px; }
+  top: 20px;
+  }
   .toggle_mnu span {
     display: block; }
 
@@ -281,7 +282,7 @@ svg {
 .toggle_mnu {
   background-color: black;
   text-transform: uppercase;
-  border: solid thin  black;
+
  }
 
 .main_footer {

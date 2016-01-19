@@ -28,7 +28,7 @@
         min-width: 300px;
         min-height: 300px;
         margin-top: -30px;
-        margin-left: -70px;
+		margin-left: -32%;
     }
 
 .dog_nice{
@@ -64,6 +64,13 @@
 	}
 	.main_footer .social_wrap ul {
 		padding-left: 0;
+	}
+	.loader .loader_inner{
+		width: 100px;
+
+		margin-top: -30px;
+		margin-left: -20%;
+
 	}
 
 }
