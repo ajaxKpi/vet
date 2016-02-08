@@ -1,0 +1,93 @@
+.toggle {
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 60px;
+    box-shadow: 0 1px 1px 0 rgba(255,255,255,.4), 0 1px 0 0 rgba(0,0,0,0.10) inset;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    transition: all .25s linear;
+    z-index: 99;
+    position: absolute;
+    top: 149px;
+    left: 13px;
+}
+.toggle .slide {
+    color: #818283;
+    color: rgba(0,0,0,.15);
+    background: #efefef;
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 68px;
+    text-align: center;
+    text-decoration: none;
+    height: 51px;
+    width: 51px;
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15), 0 1px 1px 0 rgba(255,255,255,.8) inset;
+    transition: all 0.3s cubic-bezier(0.43, 1.3, 0.86, 1);
+    background-image: url("../img/ukraine.png");
+    -webkit-background-size: cover;
+    background-size: 109%;
+    background-position: center;
+}
+.toggle .slide span{
+    text-shadow: 0 1px 1px rgba(255,255,255,.7), 0 0 1px rgba(0,0,0,.3);
+}
+.toggle .slide:before,
+.toggle .slide:after {
+    color: #FFF;
+    content: "\f023";
+    font-family: fontAwesome;
+    font-size: 34px;
+    font-weight: 400;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+}
+.toggle .slide:before {
+    content: "";
+    right: -52px;
+    top: 4px;
+    width: 45px;
+    height: 45px;
+    color: #00ba00;
+    /* background-color: #1C1CB0; */
+    background-image: url("../img/britain.png");
+    -webkit-background-size: cover;
+    background-size: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+.toggle .slide:after {
+    content: "";
+    left: -51px;
+    top: 3px;
+    width: 45px;
+    height: 45px;
+    color: #00ba00;
+    /* background-color: #1C1CB0; */
+    background-image: url("../img/ukraine.png");
+    -webkit-background-size: cover;
+    background-size: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+.toggle.on {
+    background-color: rgba(255,255,255,0.25);
+}
+.toggle.on .slide {
+    left: 49px;
+    color: #00d100;
+    background-image: url("../img/britain.png");
+    -webkit-background-size: cover;
+    background-size: 109%;
+    background-position: center;
+}

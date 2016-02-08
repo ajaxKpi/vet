@@ -26,14 +26,18 @@
 	}
     .loader .loader_inner {
         min-width: 300px;
-        min-height: 300px;
+        min-height: 280px;
         margin-top: -30px;
 		margin-left: -32%;
     }
 
-.dog_nice{
-	display: none;
-}
+	.dog_nice{
+		display: none;
+	}
+
+	#svg_dog-h24{
+			display: none;
+		}
 .section_header_hide{
 	display: block;
 }
@@ -44,7 +48,12 @@
 		margin-top: 33px;
 	}
 
-	
+	.uniq_p{
+		text-align: left;
+	}
+
+
+
 }
 
 /* Extra Small Devices, Phones */
@@ -60,23 +69,139 @@
 	.main_footer .social_wrap {
 		float: left;
 		margin-top: 20px;
-		width: 100%;
+
 	}
 	.main_footer .social_wrap ul {
 		padding-left: 0;
 	}
 	.loader .loader_inner{
 		width: 100px;
-
 		margin-top: -30px;
-		margin-left: -20%;
+		margin-left: -120px;
+		background-position: right;
+		overflow: visible;
+	}
+	.year{
+		float: left;
+		max-width:80%
+	}
+	.resume_icon{
+		float: left;
+		width:20%;
+	}
+	.resume_icon svg{
+		width: 100%;
+	}
+	.resume_item p{
+		clear: both;
+	}
+
+
+
+	.toggle {
+
+		border-radius: 60px;
+
+
+		width: 75px;
+		height: 37px;
+
+
+
+		z-index: 99;
+		position: absolute;
+		top: 137px;
+		left: 25px;
+	}
+	.toggle .slide {
+		color: #818283;
+		color: rgba(0,0,0,.15);
+		background: #efefef;
+		border-radius: 50%;
+		font-size: 30px;
+		line-height: 68px;
+		text-align: center;
+		text-decoration: none;
+		height: 35px;
+		width: 35px;
+		position: absolute;
+		top: 1px;
+		left: 0;
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15), 0 1px 1px 0 rgba(255,255,255,.8) inset;
+		transition: all 0.3s cubic-bezier(0.43, 1.3, 0.86, 1);
+		background-image: url("../img/ukraine.png");
+		-webkit-background-size: cover;
+		background-size: 109%;
+		background-position: center;
+	}
+	.toggle .slide span{
+		text-shadow: 0 1px 1px rgba(255,255,255,.7), 0 0 1px rgba(0,0,0,.3);
+	}
+	.toggle .slide:before,
+	.toggle .slide:after {
+		color: #FFF;
+		content: "\f023";
+		font-family: fontAwesome;
+		font-size: 34px;
+		font-weight: 400;
+		text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+		-webkit-font-smoothing: antialiased;
+		position: absolute;
+	}
+	.toggle .slide:before {
+
+		right: -42px;
+		top: 1px;
+		width: 35px;
+		height: 35px;
+		color: #00ba00;
+
+		-webkit-background-size: cover;
+		background-size: 35px;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0.4;
+	}
+	.toggle .slide:after {
+		content: "";
+		left: -43px;
+		top: 0px;
+		width: 35px;
+		height: 35px;
+		color: #00ba00;
+
+		background-image: url("../img/ukraine.png");
+		-webkit-background-size: cover;
+		background-size: 35px;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0.4;
+	}
+	.toggle.on {
 
 	}
+	.toggle.on .slide {
+		left: 41px;
+		color: #00d100;
+		background-image: url("../img/britain.png");
+		-webkit-background-size: cover;
+		background-size: 109%;
+		background-position: center;
+	}
+
+
 
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+	.loader .loader_inner{
+		width: 100px;
+		margin-top: -30px;
+		margin-left: -125px;
+
+	}
+
 
 }
 

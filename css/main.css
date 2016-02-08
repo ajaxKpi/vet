@@ -5,7 +5,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.6;
-  -webkit-font-smoothing: antialised; }
+  }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -78,7 +78,7 @@ section {
     top: 0;
     width: 100%;
     z-index: 9999;
-    background-color: #327191;
+
 
 }
   .loader .loader_inner {
@@ -112,9 +112,11 @@ svg {
   height: 60px;
   position: fixed;
   z-index: 100;
-  border: solid 1px blue;
+  border: solid 1px white;
   right: 20px;
   top: 20px;
+  outline: none;
+  opacity: 0.8;
   }
   .toggle_mnu span {
     display: block; }
@@ -328,6 +330,8 @@ svg {
   
 }
 
+
+
 .resume_container .left .resume_description strong {
   margin-left: 10px; }
 .resume_container .right .resume_description strong {
@@ -346,10 +350,11 @@ svg {
   margin-top: 30px; }
 .resume_container .year {
   font-weight: 600;
+  margin-bottom: 0px;
   font-style: italic;
   display: inline-block;
   padding: 0 15px;
-  margin-bottom: 15px; }
+  }
 .resume_container strong {
   font-weight: 600;
   font-style: normal;
@@ -359,11 +364,11 @@ svg {
 .resume_container .resume_item {
   margin-bottom: 40px; }
   .resume_container .resume_item p {
-    margin-top: 10px; }
+    margin-top:0; }
   .resume_container .resume_item:last-child {
     margin-bottom: 0; }
     .resume_container .resume_item:last-child p {
-      margin-bottom: 0; }
+      margin-bottom: 25px; }
 
 .resume_icon {
   font-size: 40px;
@@ -371,7 +376,7 @@ svg {
     display: inline;}
   .resume_icon .year {
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom:0px;
     padding: 0 10px; }
 
 .s_portfolio ul,
@@ -746,3 +751,46 @@ ul li{
   color: #000;
   font-weight: 800;
 }
+.resume_container ul{
+margin-top: 0;
+  margin-bottom:25px;
+  padding-left:0;
+}
+
+.row p{
+  margin-bottom:0px;
+}
+.uniq_p{
+  text-align: center;
+  margin-top:0;
+  margin-bottom: 25px;
+}
+/*
+.toggle_mnu {
+  animation-name: color_change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes color_change {
+  from { background-color: white; }
+  to { background-color: black; }
+}
+@-moz-keyframes color_change {
+  from { background-color: white; }
+  to { background-color: black; }
+}
+@-ms-keyframes color_change {
+  from { background-color: white; }
+  to { background-color: black; }
+}
+@-o-keyframes color_change {
+  from { background-color: white; }
+  to { background-color: black; }
+}
+@keyframes color_change {
+  from { background-color: white; }
+  to { background-color: black; }
+}
+*/

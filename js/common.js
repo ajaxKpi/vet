@@ -6,6 +6,47 @@ Slider_TO =10000;
 $(".loader").delay(2000).fadeOut("slow");
 $(".loader_inner").delay(2000).fadeOut("slow");
 
+font_add='';
+if ($(window).width()<468){
+	font_add ='tworow'
+}
+
+if($.cookie("lang")==undefined){
+	lang = navigator.language.substr(0,2);
+	if (lang=='ua'){
+		$.cookie("lang", "ua");}
+	else if(lang=='en'){
+		$.cookie("lang", "en");
+	}
+	else{
+		$.cookie("lang", "ua");
+	}
+}
+
+
+if ($.cookie("lang")=='ua'){
+	$('.toggle').removeClass('on');
+	$(".Family_doc").html('<use xlink:href=#icon-GrandHotel></use>')
+	$(".sandwich").text('МЕНЮ');
+	$("a[href='#home']").html('ВГОРУ<span></span>');
+	$("a[href='#dog_nice']").html('ПОСЛУГИ<span></span>');
+	$("a[href='#services']").html('ПОСЛУГИ<span></span>');
+	$("a[href='#contacts']").html('Контакти<span></span>');
+
+
+}
+else {
+	$('.toggle').addClass('on');
+	$(".Family_doc").html('<use xlink:href=#icon-GrandHotel_en></use>')
+	$(".sandwich").text('MENU');
+	$("a[href='#home']").html('UP<span></span>');
+	$("a[href='#dog_nice']").html('Services<span></span>');
+	$("a[href='#services']").html('Services<span></span>');
+	$("a[href='#contacts']").html('Contacts<span></span>');
+	$(".nolatin").text('There is no better doctor than a true friend');
+}
+
+
 
 /*
  		*************************** TEMPLATE PART *******************************
@@ -38,7 +79,7 @@ $(document).ready(function() {
 
 
 	$(".animation_3").animated("fadeInRight", "fadeOutDown");
-//	$(".service_item_svg").animated("fadeInLeft", "fadeOutDown");
+	$(".uniq_p ").animated("fadeInLeft", "fadeOutDown");
 //	$(".service_item_svg").animated("fadeInRight", "fadeOutDown");
 
 	function heightDetect() {
@@ -60,17 +101,27 @@ $(document).ready(function() {
 	}).append("<span>");
 
 	$(".toggle_mnu").click(function() {
+		prev_color=  $(".toggle_mnu").css('border-color')
+
 		if ($(".top_mnu").is(":visible")) {
-            $(".toggle_mnu").css("border",'solid 1px blue')
+            $(".toggle_mnu").css("border",'solid 1px')
+			$('.call24 p').css('color',prev_color_tel);
+
 			$(".top_text").css("opacity", "1");
 			$(".top_mnu").fadeOut(600);
 			$(".top_mnu li a").removeClass("fadeInUp animated");
 		} else {
 			$(".top_text").css("opacity", ".1");
-            $(".toggle_mnu").css("border",'solid 3px blue');
+			prev_color_tel = $('.call24 p').css('color');
+
+			$('.call24 p').css('color','white');
+
+
+            $(".toggle_mnu").css("border",'solid 2px');
 			$(".top_mnu").fadeIn(600);
 			$(".top_mnu li a").addClass("fadeInUp animated");
 		};
+		$(".toggle_mnu").css('border-color',prev_color)
 	});
 
 
@@ -79,7 +130,7 @@ $(document).ready(function() {
 
 	$("a[href*='#']").mPageScroll2id();
 
-    if ( $(window).width()<1000){
+    if ( $(window).width()<1000&&$.cookie("lang")=='ua'){
         $(".Family_doc").html('<use xlink:href="img/fonts_SVG.svg#icon-GrandHoteltworow"></use>')
     }
 
@@ -101,6 +152,22 @@ $(document).ready(function() {
             } else {
                 $('.call24 p').css('color', 'white');
             }
+
+			if(scroll_start > offset.top-140) {
+				if ($(".toggle_mnu").css('border-color')== 'rgb(255, 255, 255)'){
+					$('.sandwich').animate({color: '#000000'})
+					$(".toggle_mnu").animate({backgroundColor: '#FFFFFF'})
+
+					$(".toggle_mnu").css('border-color', 'black')
+					}
+			} else {
+				if ($(".toggle_mnu").css('border-color')== 'rgb(0, 0, 0)') {
+						$(".toggle_mnu").animate({backgroundColor: '#000000'})
+						$('.sandwich').animate({color: '#FFFFFF'})
+						$('.toggle_mnu').css('border-color', 'white')
+				}
+			}
+
         });
     }
 
@@ -228,5 +295,47 @@ var autoSlide = setInterval(function() {
 
 	prevIndex = currentIndex;
 }, Slider_TO);
+
+
+
+$(function() {
+	$('.toggle').on('click', function() {
+		if ($(this).hasClass('on')) {
+			$.cookie("lang", "ua");
+//ua
+			$(".sandwich").text('МЕНЮ');
+			$("a[href='#home']").html('ВГОРУ<span></span>');
+			$("a[href='#dog_nice']").html('ПОСЛУГИ<span></span>');
+			$("a[href='#services']").html('ПОСЛУГИ<span></span>');
+			$("a[href='#contacts']").html('Контакти<span></span>');
+			$(".Family_doc").html('<use xlink:href=#icon-GrandHotel'+font_add+'></use>')
+			$(this).removeClass('on');
+
+			$.get( "ua_content.html", function( data ) {
+				$( "#pjax-container" ).html( data );
+				//alert( "Load was performed." );
+			});
+		} else {
+
+			$(this).addClass('on');
+//eng
+			$.cookie("lang", "en");
+			$(".sandwich").text('MENU');
+			$("a[href='#home']").html('UP<span></span>');
+			$("a[href='#dog_nice']").html('Services<span></span>');
+			$("a[href='#services']").html('Services<span></span>');
+			$("a[href='#contacts']").html('Contacts<span></span>');
+			$(".nolatin").text('There is no better doctor than a true friend');
+
+			$(".Family_doc").html('<use xlink:href=#icon-GrandHotel_en></use>')
+			$.get( "en_content.html", function( data ) {
+				$( "#pjax-container" ).html( data );
+				//alert( "Load was performed." );
+			});
+		}
+	});
+});
+
+
 
 
